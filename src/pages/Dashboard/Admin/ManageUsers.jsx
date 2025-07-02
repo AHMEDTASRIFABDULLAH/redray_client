@@ -10,10 +10,10 @@ import Pagenaton from "../../../routes/My-pages/Pagenaton";
 const ManageUsers = () => {
   const axiosPublic = useAxiosPublic();
   const [sort, setSort] = useState("");
-  //   paginaton state
+
   const [currentPage, setCurrPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(4);
-  //  pagination state end
+
   const { data, refetch, isLoading } = useQuery({
     queryKey: ["Allusers", sort],
     queryFn: async () => {
